@@ -147,52 +147,63 @@
         <li><strong>Sco–Cen component T kinematic ages</strong> – combining new radial velocities with Gaia astrometry and Chronostar to refine ages for the subgroup hosting PDS 70.</li>
       </ul>
       <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem;">
-         <figure style="margin:0;">
-          <img src="img/simulation.png"
-               alt="Milky Way-like disc simulation"
-               style="max-width:350px; border-radius:6px; display:block;">
-          <figcaption style="font-size:1.2rem; color:#a3a8c0; margin-top:0.3rem;">
-            Milky Way-like disc simulation
-          </figcaption>
-        </figure>
-        
-        <figure style="margin:0;">
-          <img src="img/action_changes2.png"
-               alt="Action evolution in Milky Way-like disc simulation for stars born in the simulation (near the disc, young) and stars in the initial condition file (further from the disc, older). This shows that (i) Actions are not conserved on very short timescales. (ii) Different mechanisms are driving radial and vertical action change - radial action is driven by spiral arms while vertical action is changed most by GMCs."
-               style="max-width:350px; border-radius:6px; display:block;">
-          <figcaption style="font-size:1.2rem; color:#a3a8c0; margin-top:0.3rem;">
-            Action evolution in Milky Way-like disc simulation for stars born in the simulation (near the disc, young) and stars in the initial condition file (further from the disc, older). This shows that (i) Actions are not conserved on very short timescales. (ii) Different mechanisms are driving radial and vertical action change - radial action is driven by spiral arms while vertical action is changed most by GMCs.
-          </figcaption>
-        </figure>
 
-        <figure style="margin:0;">
-          <img src="img/abs_main_plot_verticalall.png"
-               alt="Action difference evolution in Milky Way-like disc simulation for pairs of stars based on their birth distance from each other. Stars born close together remain clustered in action space throughout the simulation."
-               style="max-width:1100px; border-radius:6px; display:block;">
-          <figcaption style="font-size:1.2rem; color:#a3a8c0; margin-top:0.3rem;">
-            Action change evolution in Milky Way-like disc simulation for pairs of stars based on their birth distance from each other. Stars born close together remain clustered in action space throughout the simulation.
-          </figcaption>
-        </figure>
+        <!--square-ish image caption next to it-->
+         <div style="display:flex; flex:1 1 360px; gap:1rem; align-items:flex-start;">
+    <img src="img/simulation.png"
+         alt="Milky Way-like disc simulation"
+         style="width:350px; max-width:100%; border-radius:6px; display:block;">
+    <p style="font-size:1.0rem; color:#a3a8c0; margin:0;">
+      <strong>Milky Way-like disc simulation.</strong><br>
+      High-resolution MHD simulation of a Milky Way-like disc with star particles.
+    </p>
+  </div>
+        <!--square-ish image caption next to it-->
 
-        <figure style="margin:0;">
-          <img src="img/streams.png"
-               alt="We can use the information about change in action difference for pairs of stars in our simulation to get information about the birth size of clusters that dispersed and show up as moving groups/disc streams using Gaia data and Bayesian analysis with simulation data."
-               style="max-width:350px; border-radius:6px; display:block;">
-          <figcaption style="font-size:1.2rem; color:#a3a8c0; margin-top:0.3rem;">
-            We can use the information about change in action difference for pairs of stars in our simulation to get information about the birth size of clusters that dispersed and show up as moving groups/disc streams using Gaia data and Bayesian analysis with simulation data.
-          </figcaption>
-        </figure>
-        
-          <figure style="margin:0; max-width:1100px;">
-          <video controls muted loop playsinline
-                 style="width:100%; border-radius:6px; display:block;">
-            <source src="img/movie.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <figcaption style="font-size:1.2rem; color:#a3a8c0; margin-top:0.3rem;">
-            Traceback / overlap-integral animation for Sco–Cen component T, using new radial velocities and Chronostar.
-          </figcaption>
-        </figure>
+<div style="display:flex; flex:1 1 360px; gap:1rem; align-items:flex-start;">
+    <img src="img/action_changes2.png"
+         alt="Action evolution in Milky Way-like disc simulation for stars born in the simulation (near the disc, young) and stars in the initial condition file (further from the disc, older). This shows that (i) Actions are not conserved on very short timescales. (ii) Different mechanisms are driving radial and vertical action change - radial action is driven by spiral arms while vertical action is changed most by GMCs."
+         style="width:350px; max-width:100%; border-radius:6px; display:block;">
+    <p style="font-size:1.0rem; color:#a3a8c0; margin:0;">
+      <strong>Action evolution.</strong><br>
+      Action evolution in Milky Way-like disc simulation for stars born in the simulation (near the disc, young) and stars in the initial condition file (further from the disc, older). This shows that (i) Actions are not conserved on very short timescales. (ii) Different mechanisms are driving radial and vertical action change - radial action is driven by spiral arms while vertical action is changed most by GMCs.
+    </p>
+  </div>         
+        <!--sfull size image - rectangle so covers the whole block and caption follows below it-->
+
+<div style="margin-top:1.5rem;">
+  <img src="img/abs_main_plot_verticalall.png"
+       alt="Action difference evolution for star pairs based on their birth distance from each other. Stars born close together remain clustered in action space throughout the simulation."
+       style="width:100%; max-width:1100px; margin:0 auto; border-radius:6px; display:block;">
+  <p style="font-size:1.0rem; color:#a3a8c0; margin-top:0.5rem; text-align:center;">
+    <strong>Action difference evolution for star pairs.</strong><br>
+    Stars born close together remain clustered in action space throughout the simulation.
+  </p>
+</div>          
+        <!--square-ish image caption next to it-->
+
+         <div style="display:flex; flex:1 1 360px; gap:1rem; align-items:flex-start;">
+    <img src="img/streams.png"
+         alt="Inferring cluster birth sizes of Gaia streams using information about change in action differences from our simulation."
+         style="width:350px; max-width:100%; border-radius:6px; display:block;">
+    <p style="font-size:1.0rem; color:#a3a8c0; margin:0;">
+      <strong>Disc streams and cluster birth sizes.</strong><br>
+      We can use the information about change in action difference for pairs of stars in our simulation to get information about the birth size of clusters that dispersed and show up as moving groups/disc streams using Gaia data and Bayesian analysis with simulation data.
+    </p>
+  </div>
+              
+<!--sfull size image - rectangle so covers the whole block and caption follows below it-->
+<div style="margin-top:1.5rem;">
+  <video controls muted loop playsinline
+         style="width:100%; max-width:1100px; margin:0 auto; border-radius:6px; display:block;">
+    <source src="img/movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <p style="font-size:1.0rem; color:#a3a8c0; margin-top:0.5rem; text-align:center;">
+    <strong>Traceback / overlap-integral animation for Sco–Cen component T.</strong><br>
+    Uses new radial velocities and Chronostar to visualize the kinematic age of the subgroup hosting PDS 70.
+  </p>
+</div>
         
       </div>
     </div>
