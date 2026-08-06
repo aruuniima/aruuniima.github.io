@@ -28,15 +28,42 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
+
+      - name: Verify build output
+        run: |
+          echo "=== _site contents ==="
+          if [ -d "./_site" ]; then
+            ls -la ./_site
+            # Fail if _site is empty
+            if [ -z "$(ls -A ./_site)" ]; then
+              echo "_site is empty — failing the job to avoid deploying empty artifact"
+              exit 1
+            fi
+          else
+            echo "_site directory not found — failing"
+            exit 1
+          fi
+
+      - name: Check for oversized files
+        run: |
+          echo "=== Files over 20MB in _site ==="
+          find ./_site -type f -size +20M -exec ls -lh {} \; || true
+          echo "=== Total _site size ==="
+          du -sh ./_site
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   # Deployment job
   deploy:
@@ -46,6 +73,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download Pages artifact
+        uses: actions/download-pages-artifact@v1
+
+      - name: Inspect artifact before deploy
+        run: |
+          echo "=== artifact root contents ==="
+          ls -la
+          echo "=== _site contents (if present) ==="
+          ls -la ./_site || true
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        
