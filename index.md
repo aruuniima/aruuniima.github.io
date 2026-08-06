@@ -3,7 +3,7 @@ layout: default
 title: Arunima – Astrophysics PhD Student (she/her)
 ---
 
-_PhD student in astrophysics, Australian National University_  
+_PhD student in Astrophysics, Australian National University_  
 _Galactic dynamics · stellar birth environments · numerical simulations_
 
 ## About me
