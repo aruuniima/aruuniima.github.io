@@ -18,7 +18,7 @@
       --link: #7fb3ff;
     }
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "New York", sans-serif;
       margin: 0;
       background: radial-gradient(circle at top left, #1b2340, #060814);
       color: var(--text-main);
@@ -74,14 +74,18 @@
         Galactic archaeology · stellar dynamics · numerical simulations
       </div>
     </header>
-
-    <div class="section">
+    
+<div class="section" style="display:flex; align-items:center; gap:1.4rem;">
+      <img src="img/IMG_4374.HEIC" alt="Arunima"
+           style="width:120px; height:120px; border-radius:50%; object-fit:cover; flex-shrink:0;">
+      <div>
       <h2>About me</h2>
       <p>
         I am a PhD student at the Australian National University, working with Mark Krumholz and Mike Ireland in Galactic archaeology and stellar dynamics. I am broadly interested in how much we can infer about where stars were born from their
         present-day phase-space information.
       </p>
     </div>
+</div>
 
     <div class="section">
       <h2>Research</h2>
@@ -116,10 +120,85 @@
         Most of my code and analysis lives on GitHub:
         <a href="https://github.com/aruuniima" target="_blank">github.com/aruuniima</a>.
       </p>
+          <!-- project card with background screenshot -->
+
+ <div style="position: relative; border-radius: 10px; overflow: hidden; min-height: 320px; margin-bottom: 1.3rem;">
+        <img src="img/bg_project.png"
+             alt="Milky Way-like disc simulation with tracer particles"
+             style="width: 100%; height: 320px; object-fit: cover; display: block; opacity: 0.78;">
+        <div style="
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: flex-end;
+          padding: 1.25rem;
+          background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.15), rgba(0,0,0,0));
+          color: #ffffff;">
+          <div style="max-width: 70%;">
+            <h3 style="margin: 0 0 0.35rem 0; font-size: 1.25rem;">
+              Tracing stellar actions in a time-dependent Galaxy
+            </h3>
+            <p style="margin: 0; line-height: 1.5; font-size: 0.95rem;">
+              High-resolution MHD simulations of a Milky Way-like disc show how present-day phase-space
+              information relates to birth environments and the evolution of orbital actions.
+            </p>
+          </div>
+        </div>
+      </div>
+      
       <ul>
         <li><strong>Action evolution in time-dependent Milky Way-like discs</strong> – studying how orbital actions change in high-resolution MHD simulations.</li>
         <li><strong>Sco–Cen component T kinematic ages</strong> – combining new radial velocities with Gaia astrometry and Chronostar to refine ages for the subgroup hosting PDS 70.</li>
       </ul>
+      <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1rem;">
+         <figure style="margin:0;">
+          <img src="img/simulation-1.pdf"
+               alt="Milky Way-like disc simulation"
+               style="max-width:260px; border-radius:6px; display:block;">
+          <figcaption style="font-size:0.85rem; color:#a3a8c0; margin-top:0.3rem;">
+            Milky Way-like disc simulation
+          </figcaption>
+        </figure>
+        
+        <figure style="margin:0;">
+          <img src="img/action_changes2.pdf"
+               alt="Action evolution in Milky Way-like disc simulation for stars born in the simulation (near the disc, young) and stars in the initial condition file (further from the disc, older). This shows that (i) Actions are not conserved on very short timescales. (ii) Different mechanisms are driving radial and vertical action change - radial action is driven by spiral arms while vertical action is changed most by GMCs."
+               style="max-width:260px; border-radius:6px; display:block;">
+          <figcaption style="font-size:0.85rem; color:#a3a8c0; margin-top:0.3rem;">
+            Action evolution in Milky Way-like disc simulation for stars born in the simulation (near the disc, young) and stars in the initial condition file (further from the disc, older). This shows that (i) Actions are not conserved on very short timescales. (ii) Different mechanisms are driving radial and vertical action change - radial action is driven by spiral arms while vertical action is changed most by GMCs.
+          </figcaption>
+        </figure>
+
+        <figure style="margin:0;">
+          <img src="img/abs_main_plot_verticalall.pdf"
+               alt="Action difference evolution in Milky Way-like disc simulation for pairs of stars based on their birth distance from each other. Stars born close together remain clustered in action space throughout the simulation."
+               style="max-width:260px; border-radius:6px; display:block;">
+          <figcaption style="font-size:0.85rem; color:#a3a8c0; margin-top:0.3rem;">
+            Action change evolution in Milky Way-like disc simulation for pairs of stars based on their birth distance from each other. Stars born close together remain clustered in action space throughout the simulation.
+          </figcaption>
+        </figure>
+
+        <figure style="margin:0;">
+          <img src="img/streams.pdf"
+               alt="We can use the information about change in action difference for pairs of stars in our simulation to get information about the birth size of clusters that dispersed and show up as moving groups/disc streams using Gaia data and Bayesian analysis with simulation data."
+               style="max-width:260px; border-radius:6px; display:block;">
+          <figcaption style="font-size:0.85rem; color:#a3a8c0; margin-top:0.3rem;">
+            We can use the information about change in action difference for pairs of stars in our simulation to get information about the birth size of clusters that dispersed and show up as moving groups/disc streams using Gaia data and Bayesian analysis with simulation data.
+          </figcaption>
+        </figure>
+        
+          <figure style="margin:0; max-width:260px;">
+          <video controls muted loop playsinline
+                 style="width:100%; border-radius:6px; display:block;">
+            <source src="img/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption style="font-size:0.85rem; color:#a3a8c0; margin-top:0.3rem;">
+            Traceback / overlap-integral animation for Sco–Cen component T, using new radial velocities and Chronostar.
+          </figcaption>
+        </figure>
+        
+      </div>
     </div>
 
     <div class ="section">
